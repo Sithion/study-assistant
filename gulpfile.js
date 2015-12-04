@@ -1,7 +1,7 @@
 var gulp = require('gulp');
-var lessFileTask = require('./tasks/less-files-task');
+require('require-dir')("tasks");
 
 
-gulp.task('default', ['less-files']);
+gulp.task('default', ['inject-html-files','less-files-watch','nodemon']);
 
 

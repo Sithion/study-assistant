@@ -17,9 +17,19 @@
 		//default route
 		$urlRouterProvider.otherwise('/authentication/signin');
 
+		authenticationStates($stateProvider);
+
+	}
+
+	function authenticationStates($stateProvider) {
 		$stateProvider
 			.state('authentication', {
 				url: '/authentication',
+				resolve: {
+					'loadMyCss': ['$ocLazyLoad', function ($ocLazyLoad) {
+						return $ocLazyLoad.load('/common/css/authentication.css');
+					}]
+				},
 				abstract: true,
 				templateUrl: 'common/layout/authentication.html'
 
@@ -36,10 +46,7 @@
 				//controller: 'signupController',
 				//controllerAs: 'vm'
 			});
-
-
 	}
-
 
 
 })();

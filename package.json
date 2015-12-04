@@ -5,21 +5,23 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cls & gulp & nodemon server.js"
+    "start": "cls & gulp"
   },
   "author": "Raphael Torres (rrdtorres@gmail.com)",
   "license": "MIT",
   "dependencies": {
     "chalk": "^1.1.1",
-    "cors": "^2.7.1",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "require-dir": "^0.3.0"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-less": "^3.0.5"
+    "gulp-inject": "^3.0.0",
+    "gulp-less": "^3.0.5",
+    "gulp-nodemon": "^2.0.4"
   },
   "repository": {
-    "type":"git",
+    "type": "git",
     "url": "https://github.com/Sithion/study-assistant.git"
   }
 }
